@@ -1,13 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import AIChatBot_LoginPage from "./AIChatBot_LoginPage"; //Change: import App from './App';
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+
+import AiChatBot_HomePage from './AiChatBot_HomePage';
+import AiChatBot_LoginPage from './AiChatBot_LoginPage';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AIChatBot_LoginPage /> {/* Change: <App />  */}
+    <AiChatBot_HomePage />
+    <AiChatBot_LoginPage />
   </React.StrictMode>
 );
 
@@ -15,3 +18,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
