@@ -1,0 +1,53 @@
+.backroundColor {
+  background-color: #e4b7f1;
+}
+
+.buttonCSS {
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#808080, #808080);
+  height: 50px;
+  font-family: Type Machine;
+  font-size: 20px;
+  font-weight: bold 100px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 2px 4px rgb(92, 92, 92);
+}
+
+.LoginButtonCentering {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.SignUpButtonCentering {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.CenterEmail {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.CenterPassword {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
