@@ -1,0 +1,26 @@
+
+.logo_HomePage {
+    width: 100px;
+    padding: 2em;
+    will-change: filter;
+    transition: filter 300ms;
+
+}
+
+.logo_HomePage:hover {
+    filter: drop-shadow(0 0 2em #646cffaa)
+
+}
+
+.logo_HomePage.react:hover {
+    filter: drop-shadow(0 0 2em #646cffaa)
+}
+
+ @keyframes logo_HomePage_Spin {
+    from {
+        transition: rotate(0deg);
+    }
+    to {
+        transition: rotate(360deg);
+    }
+ }
