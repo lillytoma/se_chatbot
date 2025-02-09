@@ -4,13 +4,15 @@ import ReactDOM from "react-dom/client";
 
 function LoginButton() {
   //Created a function for login button
+
   return <button class="buttonCSS LoginButtonCentering">Login</button>; //created login button
 } //login button function ends
 
 function SignUpButton() {
   //Created a function for sign up button
   return (
-    <button class="buttonCSS SignUpButtonCentering">Sign Up</button> //created sign up button
+    <button class="buttonCSS SignUpButtonCentering">Sign Up</button>
+    //created sign up button
   );
 } //sign up button function ends
 
@@ -38,9 +40,8 @@ function AIChatBot_LoginPage() {
             {/* input created to ask user for input on password*/}
           </label>
           <LoginButton /> {/* This is the login button*/}
-        </form>
+        </form>{" "}
         <SignUpButton /> {/* This is the sign in button*/}
-        print
       </body>
     </div>
   );

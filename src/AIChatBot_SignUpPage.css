@@ -1,0 +1,98 @@
+.backroundColor {
+  background-color: #e4b7f1;
+}
+
+.buttonCSS {
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#808080, #808080);
+  height: 50px;
+  font-family: Type Machine;
+  font-size: 20px;
+  font-weight: bold 100px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 2px 4px rgb(92, 92, 92);
+}
+
+.CenterName {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.CenterLastName {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.CenterEmail {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.CenterPassword {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.CenterPasswordConfirmation {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 42.3%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.WelcomeMessageCenter {
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: Type Machine;
+}
+
+.buttonCSS {
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#808080, #808080);
+  height: 50px;
+  font-family: Type Machine;
+  font-size: 20px;
+  font-weight: bold 100px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 2px 4px rgb(92, 92, 92);
+}
+
+.CreateAccountButton {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

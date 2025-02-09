@@ -36,7 +36,7 @@
   margin: 0;
   position: absolute;
   top: 30%;
-  left: 43%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -46,7 +46,7 @@
   margin: 0;
   position: absolute;
   top: 40%;
-  left: 45%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
