@@ -4,13 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import AiChatBot_HomePage from './AiChatBot_HomePage';
-import AiChatBot_LoginPage from './AIChatBot_LoginPage';
+//import AiChatBot_LoginPage from './AIChatBot_LoginPage';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AiChatBot_HomePage />
-    <AiChatBot_LoginPage />
+    {/* <AiChatBot_LoginPage /> */}
   </React.StrictMode>
 );
 
