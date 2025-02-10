@@ -1,26 +1,55 @@
-
-.logo_HomePage {
-    width: 100px;
-    padding: 2em;
-    will-change: filter;
-    transition: filter 300ms;
-
-}
-
-.logo_HomePage:hover {
-    filter: drop-shadow(0 0 2em #646cffaa)
-
-}
-
-.logo_HomePage.react:hover {
-    filter: drop-shadow(0 0 2em #646cffaa)
-}
-
- @keyframes logo_HomePage_Spin {
-    from {
-        transition: rotate(0deg);
+    .backgroundColor {
+        background-color: #e4abf3;
+        /*this is for the background color of the whole page*/
+        margin: 0;
+        /*removes the padding to not give unwanted space*/
+        padding: 0;
+        /* Makes the background cover the full viewport height */
+        height: 100vh;
     }
-    to {
-        transition: rotate(360deg);
+
+    /*this is for the styling for the search form container */
+    .search-form {
+        margin-top: 20px;
+        /*this adds spacing from above the form*/
+        display: flex;
+        /*this uses flexbox for the layout*/
+        gap: 10px;
+        /*this adds spacing between the input and the button*/
     }
- }
+
+    /*this is for the styling of the search input field */
+    .search-input {
+        /*this adds padding inside the input field for better readibility*/
+        padding: 10px;
+        /*this adds a border around the input field*/
+        border: 1px solid #eb0e0e;
+        /*this adds a border radius to the input field*/
+        border-radius: 5px;
+        /*this sets the width of the input field*/
+        width: 200px;
+    }
+
+    /*this is for the styling of the search button */
+
+    .search-button {
+        padding: 8px 20px;
+        /*this adds padding inside the button for better readibility*/
+        background-color: aqua;
+        /*this sets the background color of the button*/
+        color: white;
+        /*this sets the text color of the button*/
+        border: none;
+        /*this removes the border of the button*/
+        border-radius: 10px;
+        /*this adds a border radius to the button*/
+        cursor: pointer;
+        /*this changes the cursor to a pointer when hovering over the button*/
+    }
+
+    /*this is for the styling of the search button when hovered over */
+
+    .search-button:hover {
+        background-color: #eb0e0e;
+        /*this changes the background color of the button when hovered over*/
+    }
