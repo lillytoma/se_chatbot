@@ -7,7 +7,7 @@
     "firebase": "^11.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -35,7 +35,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "webpack": "^5.97.1"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
