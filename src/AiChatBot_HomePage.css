@@ -8,6 +8,10 @@
         height: 100vh;
     }
 
+    .commentBoxBackgroundColor {
+        background-color: #eb0e0e;
+    }
+
     /*this is for the styling for the search form container */
     .search-form {
         margin-top: 20px;
