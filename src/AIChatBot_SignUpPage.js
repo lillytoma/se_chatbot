@@ -50,5 +50,5 @@ function AIChatBot_SignUpPage() {
 }
 
 export default AIChatBot_SignUpPage;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AIChatBot_SignUpPage />);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<AIChatBot_SignUpPage />);
