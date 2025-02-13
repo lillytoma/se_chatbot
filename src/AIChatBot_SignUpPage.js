@@ -2,7 +2,7 @@ import "./AIChatBot_SignUpPage.css";
 import ReactDOM from "react-dom/client";
 
 function CreateAccounttButton() {
-  //Created a function for CreateAccount button
+  //Ceated a function for CreateAccount buttonr
 
   return <button class="buttonCSS CreateAccountButton">Create Account</button>; //created login button
 } //create account button function ends
@@ -50,5 +50,4 @@ function AIChatBot_SignUpPage() {
 }
 
 export default AIChatBot_SignUpPage;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AIChatBot_SignUpPage />);
+
