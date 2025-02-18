@@ -19,17 +19,25 @@
   <script>
     // Initialize Firebase 
     const firebaseConfig = {
-  apiKey: "AIzaSyAurWFu94QzzOxS9ejcobyq8ubWb0inPlU",
-  authDomain: "se-chatbot-73ead.firebaseapp.com",
-  projectId: "se-chatbot-73ead",
-  storageBucket: "se-chatbot-73ead.firebasestorage.app",
-  messagingSenderId: "318939988070",
-  appId: "1:318939988070:web:3a6ee33fb2abe812c7eda7",
-  measurementId: "G-DFTBLS5R7X"
-};
+    apiKey: "AIzaSyAurWFu94QzzOxS9ejcobyq8ubWb0inPlU",
+    authDomain: "se-chatbot-73ead.firebaseapp.com",
+    projectId: "se-chatbot-73ead",
+    storageBucket: "se-chatbot-73ead.firebasestorage.app",
+    messagingSenderId: "318939988070",
+    appId: "1:318939988070:web:3a6ee33fb2abe812c7eda7",
+    measurementId: "G-DFTBLS5R7X"
+    };
+    
     const app = firebase.initializeApp(firebaseConfig);
-  </script>
 
+    //use this whenever we want to interact with the database
+    export const db = firebase.firestore();
+    //rules so it doesnt yell at us
+    db.settings({timestampsinSnapshots: true});
+    
+  </script>
+    <!-- I added this so we can access the db i created to manipulate the database -->
+  <script src = "src/AIChatBot_LoginPage.js"></script>
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 
