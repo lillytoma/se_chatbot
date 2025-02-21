@@ -1,9 +1,9 @@
-import AiChatBot_LoginPage from './AIChatBot_LoginPage'; // Make sure this path is correct
+import AIChatBot_LoginPage from './AIChatBot_LoginPage'; // Make sure this path is correct
 
 function App() {
   return (
     <div className="App">
-      <AiChatBot_LoginPage />
+      <AIChatBot_LoginPage />
     </div>
   );
 }

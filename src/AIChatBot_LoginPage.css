@@ -2,7 +2,7 @@
   background-color: #e4b7f1;
 }
 
-.buttonCSS {
+.ButtonCSS{
   border: none;
   color: rgb(255, 255, 255);
   background: linear-gradient(#808080, #808080);
@@ -15,22 +15,42 @@
   box-shadow: 2px 4px rgb(92, 92, 92);
 }
 
-.LoginButtonCentering {
+.LoginButton {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#808080, #808080);
+  height: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold 100px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 2px 4px rgb(92, 92, 92);
 }
 
-.SignUpButtonCentering {
+.SignUpButton {
   margin: 0;
   position: absolute;
   top: 60%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  border: none;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(#808080, #808080);
+  height: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold 100px;
+  margin: 5px;
+  width: 200px;
+  box-shadow: 2px 4px rgb(92, 92, 92);
 }
 .CenterEmail {
   margin: 0;
