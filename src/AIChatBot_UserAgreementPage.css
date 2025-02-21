@@ -1,0 +1,21 @@
+.backroundColor {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  /* background-color: #e4b7f1; */
+  margin: 0;
+  /*removes the padding to not give unwanted space*/
+  padding: 0;
+  /* Makes the background cover the full viewport height */
+  height: 100vh;
+}
+
+h5 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
