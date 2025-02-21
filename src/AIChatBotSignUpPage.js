@@ -1,5 +1,4 @@
-import "./AIChatBot_SignUpPage.css";
-import ReactDOM from "react-dom/client";
+import "./AIChatBotSignUpPage.css";
 
 function CreateAccounttButton() {
   //Created a function for CreateAccount button
@@ -50,5 +49,3 @@ function AIChatBot_SignUpPage() {
 }
 
 export default AIChatBot_SignUpPage;
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<AIChatBot_SignUpPage />);

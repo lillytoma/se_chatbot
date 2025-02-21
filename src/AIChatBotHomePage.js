@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 //right here you are importing the css file for the styling portion
-import "./AiChatBot_HomePage.css";
+import "./AIChatBotHomePage.css";
 
-function AiChatBot_HomePage_CommentBox() {
+function AIChatBot_HomePage_CommentBox() {
     // right here you are creating a state to store comments
     const [getComments, setComments] = useState([]);
     const [newComment, setNewComments] = useState("");
@@ -52,7 +52,7 @@ function AiChatBot_HomePage_CommentBox() {
 }
 
 //right here you are creating a function that will be exported to the App.js file
-function AiChatBot_HomePage() {
+function AIChatBot_HomePage() {
     //right here you are creating a state that will be used to store the search query
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -89,10 +89,10 @@ function AiChatBot_HomePage() {
             </form>
 
             {/* right here is the comment box component */}
-            <AiChatBot_HomePage_CommentBox />
+            <AIChatBot_HomePage_CommentBox />
         </div>
     );
 }
 
 //this will export the component so it can be used in other files
-export default AiChatBot_HomePage;
+export default AIChatBot_HomePage;
