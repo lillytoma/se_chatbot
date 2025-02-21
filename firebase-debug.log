@@ -1,0 +1,82 @@
+[debug] [2025-02-20T21:16:36.897Z] ----------------------------------------------------------------------
+[debug] [2025-02-20T21:16:36.899Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2025-02-20T21:16:36.899Z] CLI Version:   13.31.0
+[debug] [2025-02-20T21:16:36.899Z] Platform:      darwin
+[debug] [2025-02-20T21:16:36.899Z] Node Version:  v23.7.0
+[debug] [2025-02-20T21:16:36.899Z] Time:          Thu Feb 20 2025 16:16:36 GMT-0500 (Eastern Standard Time)
+[debug] [2025-02-20T21:16:36.900Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-20T21:16:36.968Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"rewrites"}
+[debug] [2025-02-20T21:16:36.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-20T21:16:36.970Z] > authorizing via signed-in user (lilyan.toma.1230@gmail.com)
+[debug] [2025-02-20T21:16:36.970Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"rewrites"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/lillytoma/Library/Mobile Documents/com~apple~CloudDocs/Documents/WSU/Senior_24/Second Semester/Software Engineering/chatbot
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-02-20T21:17:36.882Z] Using project from CLI flag: se-chatbot-73ead
+[debug] [2025-02-20T21:17:36.884Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:36.884Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:36.885Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/se-chatbot-73ead [none]
+[debug] [2025-02-20T21:17:37.085Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/se-chatbot-73ead 200
+[debug] [2025-02-20T21:17:37.085Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/se-chatbot-73ead {"projectId":"se-chatbot-73ead","projectNumber":"318939988070","displayName":"SE-CHATBOT","name":"projects/se-chatbot-73ead","resources":{"hostingSite":"se-chatbot-73ead"},"state":"ACTIVE","etag":"1_76531b3c-2d74-4133-89c7-bf1cb340c531"}
+[info] i  Using project se-chatbot-73ead (SE-CHATBOT) 
+[info] 
+=== Dataconnect Setup
+[debug] [2025-02-20T21:17:37.097Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.097Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.097Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/se-chatbot-73ead/billingInfo [none]
+[debug] [2025-02-20T21:17:37.315Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/se-chatbot-73ead/billingInfo 200
+[debug] [2025-02-20T21:17:37.315Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/se-chatbot-73ead/billingInfo {"name":"projects/se-chatbot-73ead/billingInfo","projectId":"se-chatbot-73ead","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-02-20T21:17:37.317Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.317Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.317Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com [none]
+[debug] [2025-02-20T21:17:37.317Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com x-goog-quota-user=projects/se-chatbot-73ead
+[debug] [2025-02-20T21:17:37.863Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com 200
+[debug] [2025-02-20T21:17:37.863Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com [omitted]
+[warn] ⚠  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2025-02-20T21:17:37.865Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.865Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:37.865Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com:enable [none]
+[debug] [2025-02-20T21:17:37.865Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/se-chatbot-73ead
+[debug] [2025-02-20T21:17:38.120Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com:enable 200
+[debug] [2025-02-20T21:17:38.120Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2025-02-20T21:17:48.123Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:48.124Z] Checked if tokens are valid: true, expires at: 1740089048159
+[debug] [2025-02-20T21:17:48.124Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com [none]
+[debug] [2025-02-20T21:17:48.124Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com x-goog-quota-user=projects/se-chatbot-73ead
+[debug] [2025-02-20T21:17:48.340Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com 200
+[debug] [2025-02-20T21:17:48.340Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/se-chatbot-73ead/services/sqladmin.googleapis.com [omitted]
+[info] ✔  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] ✔  Wrote dataconnect/dataconnect.yaml 
+[info] ✔  Wrote dataconnect/schema/schema.gql 
+[info] ✔  Wrote dataconnect/connector/connector.yaml 
+[info] ✔  Wrote dataconnect/connector/queries.gql 
+[info] ✔  Wrote dataconnect/connector/mutations.gql 
+[info] ✔  Detected WEB app in directory /Users/lillytoma/Library/Mobile Documents/com~apple~CloudDocs/Documents/WSU/Senior_24/Second Semester/Software Engineering/chatbot 
+[debug] [2025-02-20T21:17:54.731Z] TypeError: additionalFrameworks.features is not iterable
+    at askQuestions (/usr/local/lib/node_modules/firebase-tools/lib/init/features/dataconnect/sdk.js:91:58)
+    at async Object.doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/dataconnect/sdk.js:19:21)
+    at async doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/dataconnect/index.js:58:9)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:41:9)
+[error] 
+[error] Error: An unexpected error has occurred.

@@ -4,46 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>React App</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
   <div id="root"></div>
-
-  <!-- Include the compiled React script -->
-  <script src="path/to/your/compiled/js/bundle.js"></script>
-  
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
-
-  <script>
-    // Initialize Firebase 
-    const firebaseConfig = {
-    apiKey: "AIzaSyAurWFu94QzzOxS9ejcobyq8ubWb0inPlU",
-    authDomain: "se-chatbot-73ead.firebaseapp.com",
-    projectId: "se-chatbot-73ead",
-    storageBucket: "se-chatbot-73ead.firebasestorage.app",
-    messagingSenderId: "318939988070",
-    appId: "1:318939988070:web:3a6ee33fb2abe812c7eda7",
-    measurementId: "G-DFTBLS5R7X"
-    };
-    
-    const app = firebase.initializeApp(firebaseConfig);
-
-    //use this whenever we want to interact with the database
-    export const db = firebase.firestore();
-    //rules so it doesnt yell at us
-    db.settings({timestampsinSnapshots: true});
-    
-  </script>
-    <!-- I added this so we can access the db i created to manipulate the database -->
-  <script src = "src/AIChatBot_LoginPage.js"></script>
-  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-
-  <script>
-    // Render the React component
-    ReactDOM.render(<AIChatBot_LoginPage />, document.getElementById('root'));
-  </script>
 </body>
 </html>
