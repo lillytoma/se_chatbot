@@ -6,7 +6,7 @@ import AIChatBotSignUpPage from "./AIChatBotSignUpPage";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AIChatBotSignUpPage />
-    {/* <App /> */}
+    {/* <AIChatBotSignUpPage /> */}
+    <App />
   </React.StrictMode>
 );
