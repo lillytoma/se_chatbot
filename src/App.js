@@ -1,42 +1,38 @@
 import React, { useState } from "react";
-import { auth } from './firebase/firebase-config';  // Correct import from firebase-config
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; // No need for 'auth' here anymore
+import { auth } from './firebase/firebase-config'; 
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; 
 
-import "./AIChatBotLoginPage.css";  // Import styles
+import "./AIChatBotLoginPage.css";  
 
 
 function App() {
-  // State variables to store user input for email and password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSignUp() {
-    // Function to handle user sign-up
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("User signed up:", userCredential.user);
-        alert("Sign-up successful!"); // Alert user on success
+        alert("Sign-up successful!"); 
       })
       .catch((error) => {
         console.error("Error signing up:", error.message);
-        alert("Sign-up failed: " + error.message); // Alert user on failure
+        alert("Sign-up failed: " + error.message); 
       });
-  } // Sign-up function ends
+  } 
 
   function handleLogin() {
-    // Function to handle user login
-
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("User logged in:", userCredential.user);
-        alert("Login successful!"); // Alert user on success
+        alert("Login successful!"); 
       })
       .catch((error) => {
         console.error("Login error:", error.message);
-        alert("Login failed: " + error.message); // Alert user on failure
+        alert("Login failed: " + error.message); 
       });
-  } // Login function ends
+  } 
 
   return (
     // need this to return attributes
