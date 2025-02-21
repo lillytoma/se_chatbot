@@ -5,31 +5,31 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "fire
 import "./AIChatBotLoginPage.css";  
 
 
-function App() {
+function App() { 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSignUp() {
+  function handleSignUp() { //this function handle the sign up incase they dont already have an account
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log("User signed up:", userCredential.user);
-        alert("Sign-up successful!"); 
+    createUserWithEmailAndPassword(auth, email, password) //this use the email and password to create the user 
+      .then((userCredential) => {   
+        console.log("User signed up:", userCredential.user);  //creates a pop up that verifys the sign up
+        alert("Sign-up successful!");  
       })
       .catch((error) => {
-        console.error("Error signing up:", error.message);
+        console.error("Error signing up:", error.message); //error message 
         alert("Sign-up failed: " + error.message); 
       });
   } 
 
-  function handleLogin() {
+  function handleLogin() { //if the user already has an account then they will be logged in
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log("User logged in:", userCredential.user);
+        console.log("User logged in:", userCredential.user);  //creates a pop up that verifys the log in
         alert("Login successful!"); 
       })
       .catch((error) => {
-        console.error("Login error:", error.message);
+        console.error("Login error:", error.message); //error message
         alert("Login failed: " + error.message); 
       });
   } 
@@ -41,7 +41,7 @@ function App() {
       {/* need div to return multiple attributes, without div I can only use one attribute */}
       {/* Body for background color */}
 
-      <form id="User_Login">
+      <form id="User_Login"> 
         <label className="CenterEmail">
           <h3>Enter Email:</h3>
           <input
