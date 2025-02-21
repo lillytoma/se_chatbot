@@ -1,12 +1,25 @@
+import React, { useState } from "react";
+import { auth } from './firebase/firebase-config'; 
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; 
+
+
 import "./AIChatBotSignUpPage.css";
 
-function CreateAccounttButton() {
-  //Created a function for CreateAccount button
+function AIChatBot_SignUpPage() {const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  return <button class="buttonCSS CreateAccountButton">Create Account</button>; //created login button
-} //create account button function ends
+  function handleSignUp() { //this function handle the sign up incase they dont already have an account
 
-function AIChatBot_SignUpPage() {
+    createUserWithEmailAndPassword(auth, email, password) //this use the email and password to create the user 
+      .then((userCredential) => {   
+        console.log("User signed up:", userCredential.user);  //creates a pop up that verifys the sign up
+        alert("Sign-up successful!");  
+      })
+      .catch((error) => {
+        console.error("Error signing up:", error.message); //error message 
+        alert("Sign-up failed: " + error.message); 
+      });
+    }
   return (
     <div>
       <body class="backroundColor">
@@ -26,13 +39,17 @@ function AIChatBot_SignUpPage() {
 
           <label class="CenterEmail">
             <h4>Enter Email:</h4>
-            <input type="Email" />
+            <input type="Email" 
+            value={email} // Binds input field to state
+            onChange={(e) => setEmail(e.target.value)} />
             {/* input created to ask user for input on Email*/}
           </label>
 
           <label class="CenterPassword">
             <h4>Enter Password:</h4>
-            <input type="Password" />
+            <input type="Password" 
+            value={password} // Binds input field to state
+            onChange={(e) => setPassword(e.target.value)} /> 
             {/* input created to ask user for input on Password*/}
           </label>
 
@@ -42,7 +59,7 @@ function AIChatBot_SignUpPage() {
             {/* input created to ask user for input on PasswordConfirmation*/}
           </label>
         </form>
-        <CreateAccounttButton /> {/* Create Account Button */}
+        <button type = "button" onClick={handleSignUp} class="buttonCSS CreateAccountButton">Create Account</button> {/* Create Account Button */}
       </body>
     </div>
   );
