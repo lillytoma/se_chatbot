@@ -86,16 +86,6 @@ function OldApp() {
 
   return (
     // need this to return attributes
-<<<<<<< HEAD
-    <html>
-      <header>
-
-        
-      </header>
-    <div className="Login_Content">
-      {/* need div to return multiple attributes, without div I can only use one attribute */}
-      {/* Body for background color */}
-=======
     <body>
       <div className="backroundColor">
         <div className="Login_Content">
@@ -114,7 +104,6 @@ function OldApp() {
               {/* After the "." sign, add at least 2 letters from a to z */}
               {/* Input created to ask user for input on email */}
             </label>
->>>>>>> 5d02f32aa198a8577d684fb3499b1825b50cbb2b
 
             <label className="CenterPassword">
               <h3>Enter Password:</h3>
@@ -133,20 +122,6 @@ function OldApp() {
             </button>
             {/* This is the login button */}
 
-<<<<<<< HEAD
-        <button type="button" onClick={handleLogin} className="LoginButton">
-          Login
-        </button>
-        {/* This is the login button */}
-
-        <button type="button" onClick={handleSignUp} className="SignUpButton">
-          Sign Up
-        </button>
-        {/* This is the sign-up button */}
-      </form>
-    </div>
-    </html>
-=======
             <button
               type="button"
               onClick={handleSignUp}
@@ -159,7 +134,6 @@ function OldApp() {
         </div>
       </div>
     </body>
->>>>>>> 5d02f32aa198a8577d684fb3499b1825b50cbb2b
   );
 }
 
