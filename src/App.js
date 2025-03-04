@@ -86,14 +86,24 @@ function OldApp() {
 
   return (
     // need this to return attributes
-    <html>
-      <header>
+    <body>
+      <div className="backroundColor">
+        <div className="Login_Content">
+          {/* need div to return multiple attributes, without div I can only use one attribute */}
+          {/* Body for background color */}
 
-        
-      </header>
-    <div className="Login_Content">
-      {/* need div to return multiple attributes, without div I can only use one attribute */}
-      {/* Body for background color */}
+          <form id="User_Login">
+            <label className="CenterEmail">
+              <h3>Enter Email:</h3>
+              <input
+                type="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                value={email} // Binds input field to state
+                onChange={(e) => setEmail(e.target.value)} // Updates state on input change
+              />
+              {/* After the "." sign, add at least 2 letters from a to z */}
+              {/* Input created to ask user for input on email */}
+            </label>
 
             <label className="CenterPassword">
               <h3>Enter Password:</h3>
@@ -112,18 +122,18 @@ function OldApp() {
             </button>
             {/* This is the login button */}
 
-        <button type="button" onClick={handleLogin} className="LoginButton">
-          Login
-        </button>
-        {/* This is the login button */}
-
-        <button type="button" onClick={handleSignUp} className="SignUpButton">
-          Sign Up
-        </button>
-        {/* This is the sign-up button */}
-      </form>
-    </div>
-    </html>
+            <button
+              type="button"
+              onClick={handleSignUp}
+              className="SignUpButton"
+            >
+              Sign Up
+            </button>
+            {/* This is the sign-up button */}
+          </form>
+        </div>
+      </div>
+    </body>
   );
 }
 
