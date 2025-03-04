@@ -1,26 +1,38 @@
 import React, { useState } from "react";
-import { auth } from './firebase/firebase-config'; 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; 
-
+import { auth } from "./firebase/firebase-config";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 import "./AIChatBotSignUpPage.css";
 
+<<<<<<< HEAD
+=======
+function CreateAccounttButton() {
+  //Created a function for CreateAccount button
 
-function AIChatBot_SignUpPage() {const [email, setEmail] = useState("");
+  return; //created login button
+} //create account button function ends
+>>>>>>> 5d02f32aa198a8577d684fb3499b1825b50cbb2b
+
+function AIChatBot_SignUpPage() {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSignUp() { //this function handle the sign up incase they dont already have an account
+  function handleSignUp() {
+    //this function handle the sign up incase they dont already have an account
 
-    createUserWithEmailAndPassword(auth, email, password) //this use the email and password to create the user 
-      .then((userCredential) => {   
-        console.log("User signed up:", userCredential.user);  //creates a pop up that verifys the sign up
-        alert("Sign-up successful!");  
+    createUserWithEmailAndPassword(auth, email, password) //this use the email and password to create the user
+      .then((userCredential) => {
+        console.log("User signed up:", userCredential.user); //creates a pop up that verifys the sign up
+        alert("Sign-up successful!");
       })
       .catch((error) => {
-        console.error("Error signing up:", error.message); //error message 
-        alert("Sign-up failed: " + error.message); 
+        console.error("Error signing up:", error.message); //error message
+        alert("Sign-up failed: " + error.message);
       });
-    }
+  }
   return (
     <div>
       <body class="backroundColor">
@@ -40,17 +52,21 @@ function AIChatBot_SignUpPage() {const [email, setEmail] = useState("");
 
           <label class="CenterEmail">
             <h4>Enter Email:</h4>
-            <input type="Email" 
-            value={email} // Binds input field to state
-            onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="Email"
+              value={email} // Binds input field to state
+              onChange={(e) => setEmail(e.target.value)}
+            />
             {/* input created to ask user for input on Email*/}
           </label>
 
           <label class="CenterPassword">
             <h4>Enter Password:</h4>
-            <input type="Password" 
-            value={password} // Binds input field to state
-            onChange={(e) => setPassword(e.target.value)} /> 
+            <input
+              type="Password"
+              value={password} // Binds input field to state
+              onChange={(e) => setPassword(e.target.value)}
+            />
             {/* input created to ask user for input on Password*/}
           </label>
 
@@ -60,7 +76,14 @@ function AIChatBot_SignUpPage() {const [email, setEmail] = useState("");
             {/* input created to ask user for input on PasswordConfirmation*/}
           </label>
         </form>
-        <button type = "button" onClick={handleSignUp} class="buttonCSS CreateAccountButton">Create Account</button> {/* Create Account Button */}
+        <button
+          type="button"
+          onClick={handleSignUp}
+          class="buttonCSS CreateAccountButton"
+        >
+          Create Account
+        </button>{" "}
+        {/* Create Account Button */}
       </body>
     </div>
   );

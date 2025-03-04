@@ -1,5 +1,11 @@
 .backroundColor {
-  background-color: #e4b7f1;
+  background-color: #e4abf3;
+  /*this is for the background color of the whole page*/
+  margin: 0;
+  /*removes the padding to not give unwanted space*/
+  padding: 0;
+  /* Makes the background cover the full viewport height */
+  height: 100vh;
 }
 
 .buttonCSS {
@@ -35,7 +41,7 @@
   font-family: Type Machine;
 }
 
-.CenterEmail {
+.CenterEmail1 {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -45,7 +51,7 @@
   font-family: Type Machine;
 }
 
-.CenterPassword {
+.CenterPassword1 {
   margin: 0;
   position: absolute;
   top: 60%;
