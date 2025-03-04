@@ -1,4 +1,6 @@
 import "./AIChatBot_UserAgreementPage.css";
+import React, { useState } from "react";
+import { auth } from './firebase/firebase-config'; 
 
 function AIChatBot_UserAgreementPage() {
   return (
