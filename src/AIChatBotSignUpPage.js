@@ -7,6 +7,12 @@ import {
 
 import "./AIChatBotSignUpPage.css";
 
+function CreateAccounttButton() {
+  //Created a function for CreateAccount button
+
+  return; //created login button
+} //create account button function ends
+
 function AIChatBot_SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,28 +26,28 @@ function AIChatBot_SignUpPage() {
         alert("Sign-up successful!");
       })
       .catch((error) => {
-        console.error("Error signing up:", error.messange); //error message
+        console.error("Error signing up:", error.message); //error message
         alert("Sign-up failed: " + error.message);
       });
   }
   return (
     <div>
-      <body className="backroundColor">
-        <h2 className="WelcomeMessageCenter">Hello Welcome To Our Chat Bot!</h2>
+      <body class="backroundColor">
+        <h2 class="WelcomeMessageCenter">Hello Welcome To Our Chat Bot!</h2>
         <form>
-          <label className="CenterName">
+          <label class="CenterName">
             <h4>Enter Name:</h4>
             <input type="Name" />
             {/* input created to ask user for input on Name*/}
           </label>
 
-          <label className="CenterLastName">
+          <label class="CenterLastName">
             <h4>Enter Last Name:</h4>
             <input type="LastName" />
             {/* input created to ask user for input on LastName*/}
           </label>
 
-          <label className="CenterEmail1">
+          <label class="CenterEmail">
             <h4>Enter Email:</h4>
             <input
               type="Email"
@@ -51,7 +57,7 @@ function AIChatBot_SignUpPage() {
             {/* input created to ask user for input on Email*/}
           </label>
 
-          <label className="CenterPassword1">
+          <label class="CenterPassword">
             <h4>Enter Password:</h4>
             <input
               type="Password"
@@ -61,7 +67,7 @@ function AIChatBot_SignUpPage() {
             {/* input created to ask user for input on Password*/}
           </label>
 
-          <label className="CenterPasswordConfirmation">
+          <label class="CenterPasswordConfirmation">
             <h4>Enter Password Confirmation:</h4>
             <input type="PasswordConfirmation" />
             {/* input created to ask user for input on PasswordConfirmation*/}
@@ -70,7 +76,7 @@ function AIChatBot_SignUpPage() {
         <button
           type="button"
           onClick={handleSignUp}
-          className="buttonCSS CreateAccountButton"
+          class="buttonCSS CreateAccountButton"
         >
           Create Account
         </button>{" "}
