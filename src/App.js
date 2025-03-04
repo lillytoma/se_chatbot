@@ -36,7 +36,11 @@ function App() {
 
   return (
     // need this to return attributes
+    <html>
+      <header>
 
+        
+      </header>
     <div className="Login_Content">
       {/* need div to return multiple attributes, without div I can only use one attribute */}
       {/* Body for background color */}
@@ -77,6 +81,7 @@ function App() {
         {/* This is the sign-up button */}
       </form>
     </div>
+    </html>
   );
 }
 
