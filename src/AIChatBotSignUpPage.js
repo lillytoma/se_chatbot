@@ -7,8 +7,18 @@ import {
 
 import "./AIChatBotSignUpPage.css";
 
+<<<<<<< HEAD
 function AIChatBot_SignUpPage() {
   const [email, setEmail] = useState("");
+=======
+function CreateAccounttButton() {
+  //Created a function for CreateAccount button
+
+  return  //created login button
+} //create account button function ends
+
+function AIChatBot_SignUpPage() {const [email, setEmail] = useState("");
+>>>>>>> 271258dcd12e9440309340df31ea40f8dfd324ff
   const [password, setPassword] = useState("");
 
   function handleSignUp() {
