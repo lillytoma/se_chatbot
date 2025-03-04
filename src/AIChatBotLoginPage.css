@@ -1,8 +1,25 @@
 .backroundColor {
-  background-color: #e4b7f1;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.ButtonCSS{
+.ButtonCSS {
   border: none;
   color: rgb(255, 255, 255);
   background: linear-gradient(#808080, #808080);
@@ -69,5 +86,65 @@
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.LoginPageLink {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 35%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+}
+
+.SignUpPageLink {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+}
+.HomePageLink {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+}
+
+.aboutUs {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+}
+
+.line {
+  width: 50%;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 5px solid gray;
+  border-radius: 5px;
+
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }

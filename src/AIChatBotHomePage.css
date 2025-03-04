@@ -1,59 +1,85 @@
-    .backgroundColor {
-        background-color: #e4abf3;
-        /*this is for the background color of the whole page*/
-        margin: 0;
-        /*removes the padding to not give unwanted space*/
-        padding: 0;
-        /* Makes the background cover the full viewport height */
-        height: 100vh;
-    }
+/*for the ones that have . infront of them they are class selectors, these are for a specific class name*/
+/*for the ones that don't have . this applies to all data types */
 
-    .commentBoxBackgroundColor {
-        background-color: #eb0e0e;
-    }
+.backgroundColor {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
 
-    /*this is for the styling for the search form container */
-    .search-form {
-        margin-top: 20px;
-        /*this adds spacing from above the form*/
-        display: flex;
-        /*this uses flexbox for the layout*/
-        gap: 10px;
-        /*this adds spacing between the input and the button*/
-    }
+.comment-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    /*this is for the styling of the search input field */
-    .search-input {
-        /*this adds padding inside the input field for better readibility*/
-        padding: 10px;
-        /*this adds a border around the input field*/
-        border: 1px solid #eb0e0e;
-        /*this adds a border radius to the input field*/
-        border-radius: 5px;
-        /*this sets the width of the input field*/
-        width: 200px;
-    }
+.post-comment {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    /*this is for the styling of the search button */
+.submit-comment {
+  width: 100%;
+  max-width: 800px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #f6f7f9;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-    .search-button {
-        padding: 8px 20px;
-        /*this adds padding inside the button for better readibility*/
-        background-color: aqua;
-        /*this sets the background color of the button*/
-        color: white;
-        /*this sets the text color of the button*/
-        border: none;
-        /*this removes the border of the button*/
-        border-radius: 10px;
-        /*this adds a border radius to the button*/
-        cursor: pointer;
-        /*this changes the cursor to a pointer when hovering over the button*/
-    }
+.submit-comment:hover {
+  background-color: #0056b3;
+}
 
-    /*this is for the styling of the search button when hovered over */
+textarea {
+  width: 100%;
+  max-width: 800px;
+  height: 150px;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 
-    .search-button:hover {
-        background-color: #eb0e0e;
-        /*this changes the background color of the button when hovered over*/
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
