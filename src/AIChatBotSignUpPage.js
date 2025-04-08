@@ -10,7 +10,7 @@ import "./AIChatBotSignUpPage.css";
 function CreateAccounttButton() {
   //Created a function for CreateAccount button
 
-  return; //created login button
+  return  //created login button
 } //create account button function ends
 
 function AIChatBot_SignUpPage() {
