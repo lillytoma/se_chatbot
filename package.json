@@ -11,13 +11,7 @@
     "pptx2json": "^0.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.0.0",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1",
-=======
-    "react-router-dom": "^6.21.3",
-    "react-scripts": "^5.0.1",
-    "unzipper": "^0.12.3",
->>>>>>> f914b016fdd552fba1a59b6e9e7906e5b9af7793
     "web-vitals": "^4.2.4"
   },
   "scripts": {
