@@ -9,8 +9,11 @@ import "./AIChatBotSignUpPage.css";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 78550cc (nav)
+=======
+>>>>>>> refs/remotes/origin/NH
 function CreateAccounttButton() {
   //Created a function for CreateAccount button
 

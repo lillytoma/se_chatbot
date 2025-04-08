@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <App />
 <<<<<<< HEAD
 
@@ -17,5 +18,9 @@ root.render(
     {/* <AIChatBotSignUpPage /> */}
     {<App />}
 >>>>>>> 78550cc (nav)
+=======
+    {/* <AIChatBotSignUpPage /> */}
+    {<App />}
+>>>>>>> refs/remotes/origin/NH
   </React.StrictMode>
 );
