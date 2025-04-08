@@ -11,5 +11,9 @@ root.render(
     {/* <Comp/> */}
     {/* <AIChatBotHomePage/> */}
     {/* <AIChatBotSignUpPage /> */}
+<<<<<<< HEAD
+=======
+    {<App />}
+>>>>>>> c4af56135b4ba0cb203396e8174e394a11cbc159
   </React.StrictMode>
 );
