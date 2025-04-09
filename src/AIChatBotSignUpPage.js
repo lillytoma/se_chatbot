@@ -7,24 +7,12 @@ import {
 
 import "./AIChatBotSignUpPage.css";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 78550cc (nav)
-=======
->>>>>>> refs/remotes/origin/NH
 function CreateAccounttButton() {
   //Created a function for CreateAccount button
 
-  return; //created login button
+  return//created login button
 } //create account button function ends
 
-<<<<<<< HEAD
-=======
->>>>>>> 4aee74f (fix)
-=======
->>>>>>> 78550cc (nav)
 function AIChatBot_SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,15 +26,7 @@ function AIChatBot_SignUpPage() {
         alert("Sign-up successful!");
       })
       .catch((error) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
         console.error("Error signing up:", error.message); //error message
-=======
-        console.error("Error signing up:", error.messange); //error message
->>>>>>> 4aee74f (fix)
-=======
-        console.error("Error signing up:", error.message); //error message
->>>>>>> 78550cc (nav)
         alert("Sign-up failed: " + error.message);
       });
   }
@@ -96,15 +76,7 @@ function AIChatBot_SignUpPage() {
         <button
           type="button"
           onClick={handleSignUp}
-<<<<<<< HEAD
-<<<<<<< HEAD
           class="buttonCSS CreateAccountButton"
-=======
-          className="buttonCSS CreateAccountButton"
->>>>>>> 4aee74f (fix)
-=======
-          class="buttonCSS CreateAccountButton"
->>>>>>> 78550cc (nav)
         >
           Create Account
         </button>{" "}
@@ -115,3 +87,4 @@ function AIChatBot_SignUpPage() {
 }
 
 export default AIChatBot_SignUpPage;
+
