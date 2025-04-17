@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { auth } from "./firebase/firebase-config";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "firebase/auth";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -17,26 +18,63 @@ import HomePageIcon from "./HomePageIcon.svg"; // icon for home page
 import AboutUsPage from "./AIChatBotAboutUs.js"; // icon for home page
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null); // state to track the logged-in user
+
+  useEffect(() => {
+    // set up an auth state observer and get user data
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user); // update state with user info or null
+    });
+
+    return () => unsubscribe(); // clean up the listener on unmount
+  }, []);
+
+  function handleLogout() {
+    // function to log out the user
+    auth
+      .signOut()
+      .then(() => {
+        console.log("User logged out");
+        alert("Logged out successfully!");
+      })
+      .catch((error) => {
+        console.error("Logout error:", error.message);
+        alert("Logout failed: " + error.message);
+      });
+  }
+
   return (
     <body>
       <div className="backroundColor">
         <BrowserRouter>
           <nav>
-            <Link to="/login" className="LoginPageLink">
-              <img src={LoginIcon} alt="Login Icon" />
-            </Link>
+            {/* Conditional rendering: Only show Login and Sign Up if no user is logged in */}
+            {!currentUser && (
+              <>
+                <Link to="/login" className="LoginPageLink">
+                  <img src={LoginIcon} alt="Login Icon" />
+                </Link>
+
+                <Link to="/signup" className="SignUpPageLink">
+                  <img src={SignUpIcon} alt="Sign Up Icon" />
+                </Link>
+              </>
+            )}
 
             <Link to="/homePage" className="HomePageLink">
               <img src={HomePageIcon} alt="Home Page Icon" />
             </Link>
 
-            <Link to="/signup" className="SignUpPageLink">
-              <img src={SignUpIcon} alt="Sign Up Icon" />
-            </Link>
-
             <Link to="/aboutUs" className="aboutUs">
               <h3>About Us</h3>
             </Link>
+
+            {/* Conditional rendering: Only show logout button if user is logged in */}
+            {currentUser && (
+              <button onClick={handleLogout} className="LogoutButton">
+                Logout
+              </button>
+            )}
 
             <hr className="line" />
           </nav>
@@ -138,6 +176,3 @@ function OldApp() {
 }
 
 export default App;
-
-
-//to run, npm start
