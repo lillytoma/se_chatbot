@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import "./AIChatBotHomePage.css";
 
-// ✅ Import Firestore query helper function
 import { fetchMatchingSlides } from "./firebase/slideSearch";
 
-// ✅ Import the API call function
 import { askQuestion } from "./api/api";
 
 function AIChatBot_HomePage_CommentBox() {

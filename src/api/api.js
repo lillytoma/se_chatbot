@@ -1,6 +1,6 @@
 export const askQuestion = async (question) => {
   try {
-    const response = await fetch("http://localhost:5001/askQuestion", {
+    const response = await fetch("http://localhost:5000/askQuestion", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

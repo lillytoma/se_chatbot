@@ -73,7 +73,11 @@ form {
 h1 {
   text-align: center;
   color: white;
-  font-size: 36px;
-  margin: 250px 0 20px;
-  /* space around it */
+
+  margin: 0;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
