@@ -71,7 +71,7 @@ function AIChatBot_HomePage_CommentBox() {
 function AIChatBot_HomePage() {
   return (
     <div className="AiChatBot_HomePage backgroundColor">
-      <h1>AI CHAT BOT</h1>
+      <h1>SIMPLE STUDY</h1>
       <AIChatBot_HomePage_CommentBox />
     </div>
   );
