@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AIChatBotHomePage.css";
+import { auth } from "./firebase/firebase-config";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 
 import { fetchMatchingSlides } from "./firebase/slideSearch";
+import { askQuestion } from "./api/api"; // RESTORED
 
-import { askQuestion } from "./api/api";
+// Logout function
+function handleLogout() {
+  signOut(auth)
+    .then(() => {
+      console.log("User logged out");
+      alert("Logged out successfully!");
+    })
+    .catch((error) => {
+      console.error("Logout error:", error.message);
+      alert("Logout failed: " + error.message);
+    });
+}
 
 function AIChatBot_HomePage_CommentBox() {
   const [getComments, setComments] = useState([]);
@@ -14,25 +28,32 @@ function AIChatBot_HomePage_CommentBox() {
     setNewComments(event.target.value);
   };
 
-
-
   const handleTheSubmit = async (event) => {
     event.preventDefault();
     if (newComment.trim() !== "") {
       setComments([...getComments, newComment]);
-  
+
+      // First check Firestore
       const firestoreResults = await fetchMatchingSlides(newComment);
-  
-      const finalAnswer = firestoreResults.length
-        ? firestoreResults[0].text 
-        : "Sorry, no slides matched your query.";
-  
-      setBotResponses([finalAnswer]);
+
+      let finalAnswer;
+      if (firestoreResults.length > 0) {
+        finalAnswer = firestoreResults[0].text;
+      } else {
+        // If no match, ask the bot instead
+        try {
+          const botAnswer = await askQuestion(newComment);
+          finalAnswer = botAnswer.answer || "Sorry, I don't know the answer.";
+        } catch (error) {
+          console.error("Bot error:", error);
+          finalAnswer = "There was an error getting a response from the bot.";
+        }
+      }
+
+      setBotResponses([...botResponses, finalAnswer]);
       setNewComments("");
     }
   };
-
-  
 
   return (
     <div className="comment-box AiChatBot_HomePage backgroundColor">
@@ -45,9 +66,8 @@ function AIChatBot_HomePage_CommentBox() {
           ))}
           {botResponses.map((response, index) => (
             <div key={`bot-${index}`} className="bot-response">
-            Bot: {typeof response === "object" ? response.text : response}
-          </div>
-          
+              Bot: {typeof response === "object" ? response.text : response}
+            </div>
           ))}
         </div>
         <form onSubmit={handleTheSubmit}>
@@ -67,9 +87,33 @@ function AIChatBot_HomePage_CommentBox() {
 }
 
 function AIChatBot_HomePage() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Check authentication state
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLoggedIn(true); // User is logged in
+      } else {
+        setIsLoggedIn(false); // User is not logged in
+      }
+    });
+
+    // Cleanup the listener on component unmount
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div className="AiChatBot_HomePage backgroundColor">
-      <h1>AI CHAT BOT</h1>
+      <div className="header-section">
+        {isLoggedIn && (
+          <button onClick={handleLogout} className="LogoutButton">
+            Logout
+          </button>
+        )}
+        <h1 className="title">SIMPLE STUDY</h1>
+      </div>
+
       <AIChatBot_HomePage_CommentBox />
     </div>
   );

@@ -32,24 +32,25 @@ function AIChatBot_SignUpPage() {
   }
   return (
     <div>
-      <body class="backroundColor">
+      <body class="backgroundColor">
         <h2 class="WelcomeMessageCenter">Hello Welcome To Our Chat Bot!</h2>
         <form>
           <label class="CenterName">
             <h4>Enter Name:</h4>
-            <input type="Name" />
+            <input type="Name" className="FirstNameInput" />
             {/* input created to ask user for input on Name*/}
           </label>
 
           <label class="CenterLastName">
             <h4>Enter Last Name:</h4>
-            <input type="LastName" />
+            <input type="LastName" className="LastNameInput" />
             {/* input created to ask user for input on LastName*/}
           </label>
 
-          <label class="CenterEmail">
+          <label class="CenterEmail1">
             <h4>Enter Email:</h4>
             <input
+              className="EmailInput"
               type="Email"
               value={email} // Binds input field to state
               onChange={(e) => setEmail(e.target.value)}
@@ -57,9 +58,10 @@ function AIChatBot_SignUpPage() {
             {/* input created to ask user for input on Email*/}
           </label>
 
-          <label class="CenterPassword">
+          <label class="CenterPassword1">
             <h4>Enter Password:</h4>
             <input
+              className="PasswordInput"
               type="Password"
               value={password} // Binds input field to state
               onChange={(e) => setPassword(e.target.value)}
@@ -69,7 +71,10 @@ function AIChatBot_SignUpPage() {
 
           <label class="CenterPasswordConfirmation">
             <h4>Enter Password Confirmation:</h4>
-            <input type="PasswordConfirmation" />
+            <input
+              type="PasswordConfirmation"
+              className="PasswordConfirmationInput"
+            />
             {/* input created to ask user for input on PasswordConfirmation*/}
           </label>
         </form>

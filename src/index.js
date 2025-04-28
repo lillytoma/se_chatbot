@@ -9,5 +9,10 @@ root.render(
   <React.StrictMode>
     <App />
 
+    {/* <Comp/> */}
+    {/* <AIChatBotHomePage/> */}
+    {/* <AIChatBotSignUpPage /> */}
+
+    {<App />}
   </React.StrictMode>
 );

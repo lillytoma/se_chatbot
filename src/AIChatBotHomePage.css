@@ -1,43 +1,65 @@
-/*for the ones that have . infront of them they are class selectors, these are for a specific class name*/
-/*for the ones that don't have . this applies to all data types */
-
 .backgroundColor {
   width: 100vw;
-  min-height: 100vh;
-  padding-top: 40px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(270deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(9, 9, 121, 1) 35%,
-      rgba(0, 212, 255, 1) 100%);
+  padding-top: 200px; /* Increased from 100px to 200px */
+
+  background-image: url("./circuit-board.svg"),
+    linear-gradient(
+      270deg,
+      rgba(102, 81, 153, 1),
+      rgba(70, 70, 180, 1),
+      rgba(100, 210, 255, 1)
+    );
+  background-size: contain, 300% 300%;
+  background-blend-mode: overlay;
+  animation: gradientPulse 60s ease infinite;
 }
 
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
 
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 .comment-box {
   width: 100%;
+  max-width: 800px;
   background-color: #f5f5f5;
   padding: 20px;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 60px; /* Increased from 40px to 60px */
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .post-comment {
   width: 100%;
-  max-width: 800px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .submit-comment {
   width: 100%;
-  max-width: 800px;
   padding: 12px;
   font-size: 16px;
   background-color: #f6f7f9;
@@ -51,11 +73,11 @@
 
 .submit-comment:hover {
   background-color: #0056b3;
+  color: white;
 }
 
 textarea {
   width: 100%;
-  max-width: 800px;
   height: 150px;
   resize: none;
   padding: 10px;
@@ -70,9 +92,23 @@ form {
   width: 100%;
 }
 
-h1 {
-  text-align: center;
-  color: white;
-  font-size: 36px;
-  margin: 250px 0 20px;
+.list {
+  margin-bottom: 10px;
+}
+
+.comment-post {
+  background-color: #e9ecef;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.bot-response {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 16px;
 }

@@ -1,11 +1,41 @@
-.backroundColor {
-  background-color: #e4abf3;
-  /*this is for the background color of the whole page*/
-  margin: 0;
-  /*removes the padding to not give unwanted space*/
-  padding: 0;
-  /* Makes the background cover the full viewport height */
+html,
+body {
+  height: 100%; /* Ensures the HTML and body elements take up the full height of the viewport */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.backgroundColor {
+  width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("./circuit-board.svg"),
+    linear-gradient(
+      270deg,
+      rgba(102, 81, 153, 1),
+      /* Lighter shade of the first color */ rgba(70, 70, 180, 1),
+      /* Lighter shade of the second color */ rgba(100, 210, 255, 1)
+        /* Lighter shade of the third color */
+    );
+  background-size: contain, 300% 300%;
+  background-blend-mode: overlay;
+  animation: gradientPulse 60s ease infinite;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .buttonCSS {
@@ -25,7 +55,7 @@
   margin: 0;
   position: absolute;
   top: 30%;
-  left: 40%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -35,7 +65,7 @@
   margin: 0;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -45,7 +75,7 @@
   margin: 0;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -55,7 +85,7 @@
   margin: 0;
   position: absolute;
   top: 60%;
-  left: 40%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -65,7 +95,7 @@
   margin: 0;
   position: absolute;
   top: 70%;
-  left: 42.3%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -75,7 +105,7 @@
   margin: 0;
   position: absolute;
   top: 20%;
-  left: 45%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Type Machine;
@@ -83,22 +113,100 @@
 
 .buttonCSS {
   border: none;
-  color: rgb(255, 255, 255);
-  background: linear-gradient(#808080, #808080);
+  color: #fff;
+  background: linear-gradient(
+    145deg,
+    #6e7e8b,
+    #4f5a63
+  ); /* Same gradient as login page */
   height: 50px;
-  font-family: Type Machine;
+  font-family: "Times New Roman", Times, serif; /* Same font as login buttons */
   font-size: 20px;
-  font-weight: bold 100px;
+  font-weight: bold;
   margin: 5px;
   width: 200px;
-  box-shadow: 2px 4px rgb(92, 92, 92);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Same shadow as login page */
+  border-radius: 30px; /* Same border radius as login page */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonCSS:hover {
+  background: linear-gradient(
+    145deg,
+    #4f5a63,
+    #6e7e8b
+  ); /* Reverse the gradient on hover */
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Inset shadow on hover */
+}
+
+.buttonCSS:focus {
+  outline: none; /* Same focus behavior */
 }
 
 .CreateAccountButton {
   margin: 0;
   position: absolute;
   top: 80%;
-  left: 45%;
+  left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+h4,
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+}
+
+.FirstNameInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.LastNameInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.EmailInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.PasswordInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.PasswordConfirmationInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
