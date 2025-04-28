@@ -1,35 +1,81 @@
-.backroundColor {
+html,
+body {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  background-image: url("./circuit-board.svg"),
+    linear-gradient(
+      270deg,
+      rgba(102, 81, 153, 1),
+      rgba(70, 70, 180, 1),
+      rgba(100, 210, 255, 1)
+    );
+  background-size: contain, 300% 300%;
+  background-blend-mode: overlay;
+  animation: gradientPulse 60s ease infinite;
+}
+
+.backgroundColor {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    270deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  color: white;
-  text-align: center;
-}
-body {
-  margin: 0;
-  padding: 0;
+  justify-content: flex-start;
+  padding-top: 200px; /* Increased from 100px to 200px */
+
+  background-image: url("./circuit-board.svg"),
+    linear-gradient(
+      270deg,
+      rgba(102, 81, 153, 1),
+      rgba(70, 70, 180, 1),
+      rgba(100, 210, 255, 1)
+    );
+  background-size: contain, 300% 300%;
+  background-blend-mode: overlay;
+  animation: gradientPulse 60s ease infinite;
 }
 
-.ButtonCSS {
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.ButtonCSS,
+.LoginButton,
+.SignUpButton {
   border: none;
-  color: rgb(255, 255, 255);
-  background: linear-gradient(#808080, #808080);
+  color: #fff;
+  background: linear-gradient(145deg, #6e7e8b, #4f5a63);
   height: 50px;
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-  font-weight: bold 100px;
-  margin: 5px;
-  width: 200px;
-  box-shadow: 2px 4px rgb(92, 92, 92);
+  font-weight: bold;
+  margin: 10px 0;
+  width: 220px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.ButtonCSS:hover,
+.LoginButton:hover,
+.SignUpButton:hover {
+  background: linear-gradient(145deg, #4f5a63, #6e7e8b);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Inset shadow */
+}
+
+.ButtonCSS:focus,
+n .LoginButton:focus,
+.SignUpButton:focus {
+  outline: none;
 }
 
 .LoginButton {
@@ -121,6 +167,17 @@ body {
   color: inherit;
 }
 
+.UserAgreement {
+  margin: 0;
+  position: absolute;
+  top: 95%;
+  left: 3%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+}
+
 .aboutUs {
   margin: 0;
   position: absolute;
@@ -147,4 +204,45 @@ body {
   height: 12px;
   border: 0;
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.EmailInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.EmailInput:focus {
+  border-color: #4f5a63;
+  outline: none;
+}
+.PasswordInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.PasswordInput:focus {
+  border-color: #4f5a63;
+  outline: none;
 }

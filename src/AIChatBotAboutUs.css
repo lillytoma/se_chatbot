@@ -1,18 +1,38 @@
-.backgroundColor {
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me-container {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Adjusts content from top */
+  align-items: center;
+  padding: 20px;
+  background-image: url("./circuit-board.svg"),
+    linear-gradient(
+      270deg,
+      rgba(102, 81, 153, 1),
+      rgba(70, 70, 180, 1),
+      rgba(100, 210, 255, 1)
+    );
+  background-size: contain, 300% 300%;
+  background-blend-mode: overlay;
+  animation: gradientPulse 60s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+.header-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    270deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  color: white;
-  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 60px; /* Adds spacing from the top for better positioning */
 }
 
 .title {
@@ -20,20 +40,36 @@
   margin-bottom: 20px;
 }
 
+.LogoutButton {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 30px; /* Moves the button lower */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.LogoutButton:hover {
+  background-color: #e84150;
+}
+
 .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  flex-grow: 1;
+  margin-top: 40px;
 }
 
 .member-card {
   background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
+  padding: 15px; /* Reduced padding for smaller cards */
   border-radius: 10px;
-  width: 250px;
+  width: 200px; /* Smaller width for cards */
   text-align: center;
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
@@ -43,9 +79,21 @@
 }
 
 .member-image {
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Smaller image size */
+  height: 80px; /* Smaller image size */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
